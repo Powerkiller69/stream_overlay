@@ -87,7 +87,15 @@
     // hide controls inside OBS (CEF exposes window.obsstudio)
     if (window.obsstudio) document.body.classList.add("obs");
 
-    document.querySelectorAll("[data-theme]").forEach(b =>
+    // browsers: zoom the fixed 1920x1080 stage to fit the window (OBS renders 1:1)
+    const fit = () => {
+      if (window.obsstudio) return;
+      document.body.style.zoom = String(Math.min(1, innerWidth / 1920, innerHeight / 1080));
+    };
+    fit();
+    addEventListener("resize", fit);
+
+    document.querySelectorAll("#controls [data-theme]").forEach(b =>
       b.addEventListener("click", () =>
         document.documentElement.setAttribute("data-theme", b.dataset.theme)));
 
