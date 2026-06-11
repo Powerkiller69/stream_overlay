@@ -123,6 +123,10 @@ Done:
       (no-auth export flow, intentional). REST insert/read round-trip verified.
       Dashboard: https://supabase.com/dashboard/project/nehypxfsiqspsosodadw
 - [x] Secrets: `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `SUPABASE_DB_PASSWORD` in `.env` (gitignored)
+- [x] Accounts (human): Figma Pro upgraded via Contra link, Contra setup + deadline confirmed (June 11)
+- [x] **Weave ELIMINATED from plan** (June 11 decision): no Weave account/assets — all animation
+      is CSS/SVG written as code. plan.md updated to match. No stinger WebM; alert burst +
+      enter/exit animations are token-themed CSS inside the components.
 
 **PENDING Phase 0:** Figma MCP round-trip check — Figma MCP server not yet configured in
 Claude Code. Add it (Figma Dev Mode MCP or figma-developer-mcp via `claude mcp add`), then
