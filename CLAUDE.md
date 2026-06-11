@@ -110,16 +110,26 @@ Input: overlay JSON `{ name, theme, widgets: [{ type, x, y, w, h, props }] }`.
 
 ## Session status (last updated June 11, 2026)
 
-Phase 0 in progress. Done: LICENSE (MIT, Priyanshu Chaudhary), README.md, .gitignore,
-git repo on `main`, pushed to https://github.com/Powerkiller69/stream_overlay (public).
-gh CLI installed + authed as Powerkiller69. Git identity set (local): Priyanshu Chaudhary
-/ navindrakumar@gmail.com.
+Phase 0 nearly done (June 11, 2026 session).
 
-Supabase done: project `stream_overlay` (ref `nehypxfsiqspsosodadw`, Mumbai, org Pixel Edits),
-`overlays` table created via migration with RLS (public select+insert), REST round-trip
-verified. URL + anon key + db password in `.env` (gitignored). CLI linked.
+Done:
+- [x] Scaffold: LICENSE (MIT, Priyanshu Chaudhary), README.md, .gitignore
+- [x] Git: repo on `main`, pushed to https://github.com/Powerkiller69/stream_overlay (public).
+      Local identity: Priyanshu Chaudhary / navindrakumar@gmail.com
+- [x] Tooling: `gh` CLI (authed as Powerkiller69), `supabase` CLI (logged in + linked) — both via brew
+- [x] Supabase: project `stream_overlay`, ref `nehypxfsiqspsosodadw`, Mumbai, org Pixel Edits.
+      `overlays(id, name, json, theme, created_at)` via migration
+      `supabase/migrations/20260611000000_create_overlays.sql`, RLS public select+insert
+      (no-auth export flow, intentional). REST insert/read round-trip verified.
+      Dashboard: https://supabase.com/dashboard/project/nehypxfsiqspsosodadw
+- [x] Secrets: `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `SUPABASE_DB_PASSWORD` in `.env` (gitignored)
 
-**PENDING Phase 0:** Figma MCP round-trip check.
+**PENDING Phase 0:** Figma MCP round-trip check — Figma MCP server not yet configured in
+Claude Code. Add it (Figma Dev Mode MCP or figma-developer-mcp via `claude mcp add`), then
+verify by reading the "OpenOverlay — Design System & Editor" file.
+
+Keep this section updated every session: mark work done here + tick phase tracker below
+as phases complete.
 
 ## Phase tracker (update the checkboxes as you complete work)
 
