@@ -166,8 +166,21 @@ Phase 1 progress (June 11):
 - [ ] Human review pass in Figma: taste tweaks, record mode-flip footage
 - [ ] Before Phase 3 (Make): move file out of Drafts into team project + publish library
 
-**Phase 1 effectively DONE June 11 (2 days early). Next:** Phase 2 MCP codegen (tokens.css
-first, then 5 widgets + chat/alert sources + test.html).
+**Phase 1 effectively DONE June 11 (2 days early).**
+
+Phase 2 progress (June 11, started 2 days early):
+- [x] `widgets/` complete: tokens.css (3 modes), 5 Web Components matching the Figma designs,
+      chat-source.js (anon Twitch IRC + backoff), alert-source.js (simulate bus), test.html
+      (stage layout mirroring templates + browser control bar, hidden in OBS via window.obsstudio).
+      All files committed. Syntax-checked. Attribute note: `<oo-chat style-variant>` (not `style`
+      — that's reserved), `<oo-webcam shape="wide|standard|circle">`.
+- [ ] Browser QA (human): theme flip, test-fire alerts, join a live Twitch chat
+- [ ] OBS verify: scene collection `openoverlay-demo` browser source → file://.../widgets/test.html.
+      If blank (CEF file:// module quirk), switch source to http://localhost:8765/test.html
+      (`python3 -m http.server 8765` in widgets/).
+
+**Next:** OBS verification = Phase 2 checkpoint, then Phase 3 (Figma Make editor — needs file
+moved out of Drafts + library published).
 
 Keep this section updated every session: mark work done here + tick phase tracker below
 as phases complete.
