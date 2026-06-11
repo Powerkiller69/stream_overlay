@@ -1,0 +1,15 @@
+{
+  "accent": { "$type": "color", "$value": "#ff3ea5" },
+  "accent-2": { "$type": "color", "$value": "#ffd23f" },
+  "bg": { "$type": "color", "$value": "#1a0b2e" },
+  "bg-glass": { "$type": "color", "$value": "#2d145acc" },
+  "text": { "$type": "color", "$value": "#fff7e8" },
+  "text-dim": { "$type": "color", "$value": "#c9a0dc" },
+  "border": { "$type": "color", "$value": "#6b2d5c" },
+  "glow": { "$type": "color", "$value": "#ff71ce" },
+  "font-display": { "$type": "fontFamily", "$value": "VT323" },
+  "font-body": { "$type": "fontFamily", "$value": "Space Grotesk" },
+  "size-s": { "$type": "number", "$value": 14 },
+  "size-m": { "$type": "number", "$value": 18 },
+  "size-l": { "$type": "number", "$value": 28 }
+}
