@@ -128,16 +128,25 @@ Done:
       is CSS/SVG written as code. plan.md updated to match. No stinger WebM; alert burst +
       enter/exit animations are token-themed CSS inside the components.
 
-**PENDING Phase 0:** Figma MCP round-trip check — Figma MCP server not yet configured in
-Claude Code. Add it (Figma Dev Mode MCP or figma-developer-mcp via `claude mcp add`), then
-verify by reading the "OpenOverlay — Design System & Editor" file.
+- [x] Figma MCP: official Figma MCP server connected + authed in Claude Code (June 11).
+      Round-trip verified by reading the design file. **Phase 0 COMPLETE.**
+      File: "OpenOverlay — Design System & Editor", fileKey `DGHpvud2X4NNe7Uz7nX2KN`,
+      https://www.figma.com/design/DGHpvud2X4NNe7Uz7nX2KN/
+      File is currently blank (Phase 1 starts now).
+      ⚠️ MCP authed as priyanshuchaudhary2017@gmail.com with **View** seat on pro team
+      "Priyanshu Chaudhary's team" — fine for reading, but confirm the editing/Make account
+      has a full seat before Phase 3.
+
+**Next up (June 11):** Phase 1 — Figma design system (human task): token variables (3 modes),
+then core 5 widget components. Also quick: Obsidian `makeathon-log.md`, OBS scene collection
+`openoverlay-demo`, start session recordings.
 
 Keep this section updated every session: mark work done here + tick phase tracker below
 as phases complete.
 
 ## Phase tracker (update the checkboxes as you complete work)
 
-- [ ] Phase 0: repo, Supabase, MCP round-trip verified
+- [x] Phase 0: repo, Supabase, MCP round-trip verified (June 11)
 - [ ] Phase 1: Figma design system (human task — Figma side)
 - [ ] Phase 2: tokens.css + 5 widgets via MCP + chat/alert sources + test.html verified in OBS
 - [ ] Phase 3: Figma Make editor (human drives Make; Claude Code assists with template JSONs & glue)
