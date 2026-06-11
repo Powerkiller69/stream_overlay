@@ -11,3 +11,6 @@
 # editor
 .vscode/
 .idea/
+
+# obsidian vault config (notes themselves are committed)
+.obsidian/
