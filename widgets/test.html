@@ -1,0 +1,121 @@
+<!doctype html>
+<!--
+  OpenOverlay — widget QA page.
+  In OBS: add as browser source, 1920x1080 (body stays transparent).
+  In a normal browser: use the control bar (bottom-left) to theme-switch,
+  test-fire alerts, and join a Twitch chat. ?channel=name&start=ms also work.
+-->
+<html lang="en" data-theme="neon">
+<head>
+<meta charset="utf-8">
+<title>OpenOverlay — test</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500&family=VT323&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<style>
+  body {
+    background: transparent;
+    margin: 0;
+    width: 1920px;
+    height: 1080px;
+    position: relative;
+    overflow: hidden;
+  }
+  /* stage layout mirrors the Figma template composition */
+  #goal    { position: absolute; left: 64px;  top: 64px; }
+  #uptime  { position: absolute; right: 64px; top: 64px; }
+  #alert   { position: absolute; left: 750px; top: 72px; }
+  #cam     { position: absolute; left: 64px;  bottom: 64px; }
+  #chat    { position: absolute; right: 64px; bottom: 134px; }
+  #socials { position: absolute; right: 64px; bottom: 64px; }
+
+  /* control bar: visible in browsers, harmless in OBS (semi-hidden corner) */
+  #controls {
+    position: absolute;
+    left: 64px;
+    top: 140px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    width: 480px;
+    font-family: system-ui;
+    opacity: 0.92;
+  }
+  #controls button, #controls input {
+    background: #1a1a28;
+    color: #ececf4;
+    border: 1px solid #3a3a52;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  #controls input { width: 140px; cursor: text; }
+  body.obs #controls { display: none; }
+</style>
+</head>
+<body>
+  <oo-goal id="goal" type="follower" label="FOLLOWER GOAL" current="1284" goal="2000"></oo-goal>
+  <oo-label id="uptime" type="uptime"></oo-label>
+  <oo-alert id="alert"></oo-alert>
+  <oo-webcam id="cam" shape="wide" nametag label="PIXEL EDITS"></oo-webcam>
+  <oo-chat id="chat" style-variant="bubble"></oo-chat>
+  <oo-label id="socials" type="socials" text="@pixelpataka"></oo-label>
+
+  <div id="controls">
+    <button data-theme="neon">Neon</button>
+    <button data-theme="minimal">Minimal</button>
+    <button data-theme="retro">Retro</button>
+    <button data-fire="follow">Follow</button>
+    <button data-fire="sub">Sub</button>
+    <button data-fire="donation">Donation</button>
+    <button data-fire="raid">Raid</button>
+    <input id="channel" placeholder="twitch channel" />
+    <button id="join">Join chat</button>
+    <button id="fakechat">Fake msg</button>
+  </div>
+
+  <script type="module">
+    import { simulate } from "./alert-source.js";
+    import "./webcam-frame.js";
+    import "./alert-box.js";
+    import "./chat-overlay.js";
+    import "./goal-bar.js";
+    import "./label.js";
+
+    // hide controls inside OBS (CEF exposes window.obsstudio)
+    if (window.obsstudio) document.body.classList.add("obs");
+
+    document.querySelectorAll("[data-theme]").forEach(b =>
+      b.addEventListener("click", () =>
+        document.documentElement.setAttribute("data-theme", b.dataset.theme)));
+
+    document.querySelectorAll("[data-fire]").forEach(b =>
+      b.addEventListener("click", () => simulate(b.dataset.fire)));
+
+    document.getElementById("join").addEventListener("click", () => {
+      const ch = document.getElementById("channel").value.trim();
+      if (!ch) return;
+      const old = document.getElementById("chat");
+      const next = document.createElement("oo-chat");
+      next.id = "chat";
+      next.setAttribute("style-variant", old.getAttribute("style-variant"));
+      next.setAttribute("channel", ch);
+      old.replaceWith(next);
+    });
+
+    const FAKES = [
+      ["pixel_pataka", "that flick was insane"],
+      ["night_owl42", "GGs! what crosshair?"],
+      ["luna_streams", "clutch or kick lol"],
+      ["raid_boss", "new overlay looks clean"]
+    ];
+    let fi = 0;
+    document.getElementById("fakechat").addEventListener("click", () => {
+      const [username, text] = FAKES[fi++ % FAKES.length];
+      document.getElementById("chat").addMessage({ username, text });
+    });
+  </script>
+</body>
+</html>

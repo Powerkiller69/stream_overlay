@@ -1,0 +1,55 @@
+/*
+ * OpenOverlay — design tokens
+ * Mirrors the Figma variable collection "tokens" 1:1 (3 modes).
+ * Theme switching: set data-theme="neon|minimal|retro" on <html> or the overlay root.
+ * Default (no attribute) = neon.
+ */
+
+:root,
+[data-theme="neon"] {
+  --oo-accent: #a855f7;
+  --oo-accent-2: #22d3ee;
+  --oo-bg: #0a0a12;
+  --oo-bg-glass: rgb(20 20 43 / 0.8);
+  --oo-text: #f4f4fa;
+  --oo-text-dim: #a1a1c2;
+  --oo-border: #3b2d5e;
+  --oo-glow: #c084fc;
+  --oo-font-display: "Orbitron", sans-serif;
+  --oo-font-body: "Inter", sans-serif;
+  --oo-size-s: 14px;
+  --oo-size-m: 18px;
+  --oo-size-l: 28px;
+}
+
+[data-theme="minimal"] {
+  --oo-accent: #e5e5e5;
+  --oo-accent-2: #a3a3a3;
+  --oo-bg: #0f0f0f;
+  --oo-bg-glass: rgb(26 26 26 / 0.7);
+  --oo-text: #fafafa;
+  --oo-text-dim: #8a8a8a;
+  --oo-border: #2e2e2e;
+  --oo-glow: rgb(255 255 255 / 0.4);
+  --oo-font-display: "Inter", sans-serif;
+  --oo-font-body: "Inter", sans-serif;
+  --oo-size-s: 14px;
+  --oo-size-m: 18px;
+  --oo-size-l: 28px;
+}
+
+[data-theme="retro"] {
+  --oo-accent: #ff3ea5;
+  --oo-accent-2: #ffd23f;
+  --oo-bg: #1a0b2e;
+  --oo-bg-glass: rgb(45 20 90 / 0.8);
+  --oo-text: #fff7e8;
+  --oo-text-dim: #c9a0dc;
+  --oo-border: #6b2d5c;
+  --oo-glow: #ff71ce;
+  --oo-font-display: "VT323", monospace;
+  --oo-font-body: "Space Grotesk", sans-serif;
+  --oo-size-s: 14px;
+  --oo-size-m: 18px;
+  --oo-size-l: 28px;
+}
