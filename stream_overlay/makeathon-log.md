@@ -37,3 +37,10 @@ One entry per session: 2–3 lines + 1 screenshot. This becomes the video script
 - Browser QA fix: 1920×1080 stage now zoom-fits browser windows (OBS still renders 1:1).
 - Remaining today: human browser QA + OBS verify (scene collection `openoverlay-demo` is pre-wired).
 - Screenshot: _(add — test.html with live chat over gameplay)_
+
+## June 11 — Day 1 (browser QA passed, session paused)
+
+- Browser QA green: theme flips, alerts fire with burst + goal bumps, live layout zoom-fits. Debugged "nothing clicks" by driving the page headless with puppeteer + Brave — clicks worked, user's tab was stale; hard refresh fixed.
+- Day 1 total: Phases 0, 1 done; Phase 2 code done + browser-verified. Two days ahead.
+- CLAUDE.md moved into this vault (repo root keeps a symlink).
+- **Resume with: OBS verify → publish Figma library → export engine.** Details in [[CLAUDE]] resume section.

@@ -36,7 +36,7 @@ Free, open-source stream overlay **builder** for Config Makeathon 2026. Design o
       editor UI (4 screens incl. full customization panel), 3 template stages, Community cover.
       Built via MCP `use_figma`. PNGs in repo `/design`.
 - [x] Phase 2 code: tokens.css + 5 Web Components + Twitch IRC chat source + alert bus +
-      test.html — **written & pushed June 11.** Pending: browser QA + OBS verify (checkpoint).
+      test.html — **written & pushed June 11. Browser QA PASSED.** Pending: OBS verify only.
 - [ ] Phase 3 (Jun 14–15): Figma Make editor app — **BLOCKER: move Figma file out of Drafts
       into team project + publish library first**
 - [ ] Phase 4 (Jun 16): export engine (ZIP + hosted) + animation polish
