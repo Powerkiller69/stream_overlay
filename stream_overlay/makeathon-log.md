@@ -15,3 +15,10 @@ One entry per session: 2–3 lines + 1 screenshot. This becomes the video script
 - OBS scene collection `openoverlay-demo` prebuilt with a browser source already pointed at the future test.html.
 - Next: core 5 widget components bound to the tokens.
 - Screenshot: _(add — variables panel with 3 modes)_
+
+## June 11 — Day 1 (widgets, built BY the agent)
+
+- All 5 core widgets (16 variants total) built directly on the Figma canvas by Claude Code via the MCP `use_figma` tool — auto-layout components, every color/font/size bound to token variables. Mode flip rethemes everything including fonts.
+- This is the workflow story inverted: not just design→code, but code→design on the same token system.
+- Human pass next: spacing/taste tweaks + record the mode-flip.
+- Screenshot: _(add — widgets page in Neon)_

@@ -144,10 +144,18 @@ Phase 1 progress (June 11):
       (8 colors + font-display/font-body + size-s/m/l), 3 modes Neon/Minimal/Retro.
       Source JSONs in `design/tokens/*.tokens.json` (Figma color-object format —
       plain hex strings get rejected, only 5/13 imported until fixed).
-- [ ] Effect styles (glow/glass-blur/hard-shadow) — add when first widget needs them
-- [ ] Core 5 widget components (human task, in progress)
+- [x] **Core 5 widgets BUILT IN FIGMA VIA MCP `use_figma`** (June 11): webcam-frame (6 variants),
+      alert-box (4), chat-overlay (2), goal-bar (2), stream-label (2) on 🧩 Overlay Widgets page.
+      All fills/strokes/text bound to token variables; fontFamily/fontSize bound too (mode switch
+      swaps Orbitron→Inter→VT323). Glow = drop shadow bound to `glow` var (no separate effect
+      styles needed so far). Page pinned to Neon mode; token swatch sheet on 🎨 Tokens page.
+      `use_figma` notes: scripts need `return` for output; errors roll back the whole call;
+      load ALL mode fonts before switching variable modes.
+- [ ] Human review pass in Figma: tweak spacing/colors to taste, record mode-flip footage
+- [ ] Before Phase 3 (Make): move file out of Drafts into team project + publish library
 
-**Next up:** widgets in Figma (human), then Phase 2 MCP codegen June 13.
+**Next up:** human design review + 1920×1080 stage frames per theme (templates), then Phase 2
+MCP codegen June 13 (tokens.css first).
 
 Keep this section updated every session: mark work done here + tick phase tracker below
 as phases complete.
