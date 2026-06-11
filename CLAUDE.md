@@ -133,9 +133,8 @@ Done:
       File: "OpenOverlay — Design System & Editor", fileKey `DGHpvud2X4NNe7Uz7nX2KN`,
       https://www.figma.com/design/DGHpvud2X4NNe7Uz7nX2KN/
       File is currently blank (Phase 1 starts now).
-      ⚠️ MCP authed as priyanshuchaudhary2017@gmail.com with **View** seat on pro team
-      "Priyanshu Chaudhary's team" — fine for reading, but confirm the editing/Make account
-      has a full seat before Phase 3.
+      MCP authed as priyanshuchaudhary2017@gmail.com, **Full seat** on pro team
+      "Priyanshu Chaudhary's team" (upgraded from View, verified June 11). Phase 3/Make unblocked.
 
 **Next up (June 11):** Phase 1 — Figma design system (human task): token variables (3 modes),
 then core 5 widget components. Also quick: Obsidian `makeathon-log.md`, OBS scene collection
