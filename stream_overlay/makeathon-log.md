@@ -9,7 +9,9 @@ One entry per session: 2–3 lines + 1 screenshot. This becomes the video script
 - Decision: Weave cut — all animations ship as token-themed CSS/SVG code instead of video assets.
 - Screenshot: _(add)_
 
-## June 11 — Day 1 (design system)
+## June 11 — Day 1 (design system: tokens)
 
-- _(tokens + widgets session — fill in tonight)_
-- Screenshot: _(add)_
+- Tokens done the workflow-story way: Claude Code wrote the variable JSONs (Neon/Minimal/Retro), imported straight into Figma — 13 variables × 3 modes, zero manual entry. First attempt taught us Figma's import wants color-object format, not hex strings (5/13 → fixed → all in).
+- OBS scene collection `openoverlay-demo` prebuilt with a browser source already pointed at the future test.html.
+- Next: core 5 widget components bound to the tokens.
+- Screenshot: _(add — variables panel with 3 modes)_

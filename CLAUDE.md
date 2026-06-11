@@ -136,9 +136,18 @@ Done:
       MCP authed as priyanshuchaudhary2017@gmail.com, **Full seat** on pro team
       "Priyanshu Chaudhary's team" (upgraded from View, verified June 11). Phase 3/Make unblocked.
 
-**Next up (June 11):** Phase 1 — Figma design system (human task): token variables (3 modes),
-then core 5 widget components. Also quick: Obsidian `makeathon-log.md`, OBS scene collection
-`openoverlay-demo`, start session recordings.
+Phase 1 progress (June 11):
+- [x] Hygiene: Obsidian installed, vault at `stream_overlay/` in repo (makeathon-log.md,
+      project-info.md). OBS scene collection `openoverlay-demo` created with browser source
+      pre-pointed at `widgets/test.html` (blank until Phase 2).
+- [x] **Tokens DONE in Figma via JSON import**: collection `tokens`, 13 variables
+      (8 colors + font-display/font-body + size-s/m/l), 3 modes Neon/Minimal/Retro.
+      Source JSONs in `design/tokens/*.tokens.json` (Figma color-object format —
+      plain hex strings get rejected, only 5/13 imported until fixed).
+- [ ] Effect styles (glow/glass-blur/hard-shadow) — add when first widget needs them
+- [ ] Core 5 widget components (human task, in progress)
+
+**Next up:** widgets in Figma (human), then Phase 2 MCP codegen June 13.
 
 Keep this section updated every session: mark work done here + tick phase tracker below
 as phases complete.
