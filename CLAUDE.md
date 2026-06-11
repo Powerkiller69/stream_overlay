@@ -151,11 +151,23 @@ Phase 1 progress (June 11):
       styles needed so far). Page pinned to Neon mode; token swatch sheet on 🎨 Tokens page.
       `use_figma` notes: scripts need `return` for output; errors roll back the whole call;
       load ALL mode fonts before switching variable modes.
-- [ ] Human review pass in Figma: tweak spacing/colors to taste, record mode-flip footage
+- [x] **Editor UI designed via MCP** (June 11): editor/main (palette + canvas with live widget
+      instances + selection handles + full-customization properties: X/Y/W/H, widget props,
+      Style sliders opacity/radius/glow, Theme swatches + custom, font dropdowns),
+      editor/export-modal (URL + ZIP tabs), home/gallery (3 template cards + saved), theme-picker.
+      App chrome = static dark palette (intentionally NOT token-bound — editor must not retheme
+      with overlay tokens).
+- [x] **Polish pass on widgets** (user wanted better than average): alert accent strip + icon
+      badge (♥★$⚡), webcam double-frame, chat bubble accent edge bars, goal knob + pct.
+      Customization story: Style sliders in panel → map to CSS var overrides at export.
+- [x] **3 template stages** (1920×1080, per-theme mode overrides, margin grid, corner brackets,
+      6 widget instances each) on 📦 Templates + **Community cover** on 📣 page.
+- [x] PNGs exported to /design (editor screens, 3 templates, cover, widgets page).
+- [ ] Human review pass in Figma: taste tweaks, record mode-flip footage
 - [ ] Before Phase 3 (Make): move file out of Drafts into team project + publish library
 
-**Next up:** human design review + 1920×1080 stage frames per theme (templates), then Phase 2
-MCP codegen June 13 (tokens.css first).
+**Phase 1 effectively DONE June 11 (2 days early). Next:** Phase 2 MCP codegen (tokens.css
+first, then 5 widgets + chat/alert sources + test.html).
 
 Keep this section updated every session: mark work done here + tick phase tracker below
 as phases complete.
@@ -163,7 +175,7 @@ as phases complete.
 ## Phase tracker (update the checkboxes as you complete work)
 
 - [x] Phase 0: repo, Supabase, MCP round-trip verified (June 11)
-- [ ] Phase 1: Figma design system (human task — Figma side)
+- [x] Phase 1: Figma design system (done June 11 — via MCP `use_figma`, human review pending)
 - [ ] Phase 2: tokens.css + 5 widgets via MCP + chat/alert sources + test.html verified in OBS
 - [ ] Phase 3: Figma Make editor (human drives Make; Claude Code assists with template JSONs & glue)
 - [ ] Phase 4: export engine, both paths tested in OBS
