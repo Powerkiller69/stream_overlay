@@ -1,0 +1,13 @@
+# env / secrets
+.env
+.env.*
+
+# screen recordings
+/footage
+
+# OS junk
+.DS_Store
+
+# editor
+.vscode/
+.idea/
