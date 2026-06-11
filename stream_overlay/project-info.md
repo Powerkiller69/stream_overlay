@@ -28,15 +28,27 @@ Free, open-source stream overlay **builder** for Config Makeathon 2026. Design o
 - Chat = anonymous Twitch IRC (justinfan, read-only); alerts = simulate-only, no platform OAuth
 - If time runs short: cut hosted-URL export, keep ZIP ("local-first, truly yours")
 
-## Phase status (as of June 11)
+## Phase status (as of June 11, evening)
 
 - [x] Phase 0: repo, Supabase, Figma MCP round-trip — **DONE June 11**
-- [ ] Phase 1: Figma design system (tokens 3 modes + core 5 widgets) — **IN PROGRESS, today's work**
-- [ ] Phase 2 (Jun 13): MCP codegen — tokens.css + 5 widgets + live chat, test.html in OBS
-- [ ] Phase 3 (Jun 14–15): Figma Make editor app
+- [x] Phase 1: design system — **DONE June 11, 2 days early.** Tokens (13 vars × 3 modes,
+      imported from agent-written JSON), 5 widget component sets (16 variants, all token-bound),
+      editor UI (4 screens incl. full customization panel), 3 template stages, Community cover.
+      Built via MCP `use_figma`. PNGs in repo `/design`.
+- [x] Phase 2 code: tokens.css + 5 Web Components + Twitch IRC chat source + alert bus +
+      test.html — **written & pushed June 11.** Pending: browser QA + OBS verify (checkpoint).
+- [ ] Phase 3 (Jun 14–15): Figma Make editor app — **BLOCKER: move Figma file out of Drafts
+      into team project + publish library first**
 - [ ] Phase 4 (Jun 16): export engine (ZIP + hosted) + animation polish
 - [ ] Phase 5 (Jun 17): deploy, docs, Figma Community publish, QA, FREEZE
 - [ ] Phase 6 (Jun 18): video, social post (#ConfigMakeathon @figma), SUBMIT
+
+## Key links added June 11
+
+- Figma file: https://www.figma.com/design/DGHpvud2X4NNe7Uz7nX2KN/ (fileKey `DGHpvud2X4NNe7Uz7nX2KN`)
+- Local QA server: `cd widgets && python3 -m http.server 8765` → http://localhost:8765/test.html
+- OBS: scene collection `openoverlay-demo`, browser source pre-pointed at widgets/test.html
+  (if blank in OBS, switch source to the localhost URL)
 
 ## Core 5 widgets
 

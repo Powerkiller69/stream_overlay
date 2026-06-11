@@ -29,3 +29,11 @@ One entry per session: 2–3 lines + 1 screenshot. This becomes the video script
 - Polish pass after "looks average" feedback: alert strips + icon badges, webcam double-frames, chat accent edge bars, goal knobs, full customization panel (style sliders, theme swatches, font pickers, custom theme).
 - Phase 1 done 2 days ahead of schedule. PNGs in /design.
 - Screenshot: _(add — neon template stage)_
+
+## June 11 — Day 1 (Phase 2: widgets as code)
+
+- Entire widget layer generated and committed: tokens.css (3 themes), 5 vanilla Web Components pixel-matched to the Figma designs, anonymous Twitch IRC chat source with reconnect, simulate() alert bus, test.html staging page.
+- Zero dependencies, zero build step — same files run as editor previews and as the OBS overlay.
+- Browser QA fix: 1920×1080 stage now zoom-fits browser windows (OBS still renders 1:1).
+- Remaining today: human browser QA + OBS verify (scene collection `openoverlay-demo` is pre-wired).
+- Screenshot: _(add — test.html with live chat over gameplay)_
