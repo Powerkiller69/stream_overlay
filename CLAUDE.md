@@ -110,17 +110,12 @@ Input: overlay JSON `{ name, theme, widgets: [{ type, x, y, w, h, props }] }`.
 
 ## Session status (last updated June 11, 2026)
 
-Phase 0 in progress. Done: LICENSE (MIT, Priyanshu Chaudhary), README.md, .gitignore.
-**PENDING — do first next session:** `git init`, initial commit, create GitHub repo
-`stream_overlay` (public), push. Blocked this session by Claude Code permission-classifier
-outage (Bash unavailable). Commands ready:
+Phase 0 in progress. Done: LICENSE (MIT, Priyanshu Chaudhary), README.md, .gitignore,
+git repo on `main`, pushed to https://github.com/Powerkiller69/stream_overlay (public).
+gh CLI installed + authed as Powerkiller69. Git identity set (local): Priyanshu Chaudhary
+/ navindrakumar@gmail.com.
 
-```
-git init && git add -A && git commit -m "chore: MIT license, README, gitignore — project scaffold"
-gh repo create stream_overlay --public --source=. --push
-```
-
-Also pending Phase 0: Supabase project + Figma MCP round-trip check.
+**PENDING Phase 0:** Supabase project + Figma MCP round-trip check.
 
 ## Phase tracker (update the checkboxes as you complete work)
 
