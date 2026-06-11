@@ -115,7 +115,11 @@ git repo on `main`, pushed to https://github.com/Powerkiller69/stream_overlay (p
 gh CLI installed + authed as Powerkiller69. Git identity set (local): Priyanshu Chaudhary
 / navindrakumar@gmail.com.
 
-**PENDING Phase 0:** Supabase project + Figma MCP round-trip check.
+Supabase done: project `stream_overlay` (ref `nehypxfsiqspsosodadw`, Mumbai, org Pixel Edits),
+`overlays` table created via migration with RLS (public select+insert), REST round-trip
+verified. URL + anon key + db password in `.env` (gitignored). CLI linked.
+
+**PENDING Phase 0:** Figma MCP round-trip check.
 
 ## Phase tracker (update the checkboxes as you complete work)
 
